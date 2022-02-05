@@ -1,0 +1,129 @@
+##########################################################################
+# FROM 00_opinion_modifiers.txt
+##########################################################################
+
+# They just genocided a Pop
+opinion_genocidal = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = -5
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+                has_ethic = "ethic_authoritarian"
+                has_ethic = "ethic_fanatic_authoritarian"
+                has_ethic = "ethic_xenophobe"
+                has_ethic = "ethic_fanatic_xenophobe"
+			}
+		}
+
+		modifier = {
+			add = -5
+			has_ethic = "ethic_egalitarian"
+			allows_purge = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		modifier = {
+			add = -10
+			has_ethic = "ethic_fanatic_egalitarian"
+			allows_purge = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		modifier = {
+			add = -5
+			has_ethic = "ethic_xenophile"
+			allows_purge = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		modifier = {
+			add = -10
+			has_ethic = "ethic_fanatic_xenophile"
+			allows_purge = no
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+
+		modifier = {
+			add = -5
+			has_ethic = "ethic_authoritarian"
+			NOR = {
+				has_ethic = "ethic_xenophobe"
+				has_ethic = "ethic_fanatic_xenophobe"
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		modifier = {
+			add = -4
+			has_ethic = "ethic_fanatic_authoritarian"
+			NOR = {
+				has_ethic = "ethic_xenophobe"
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		modifier = {
+			add = -2
+			has_ethic = "ethic_xenophobe"
+			OR = {
+				has_ethic = "ethic_authoritarian"
+				has_ethic = "ethic_fanatic_authoritarian"
+			}
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		modifier = {
+			add = 1
+			AND = {
+				has_ethic = "ethic_fanatic_xenophobe"
+				has_ethic = "ethic_authoritarian"
+			}
+			NOR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+
+		modifier = {
+			add = -5
+			has_ai_personality = awakened_fallen_empire_xenophile
+		}
+	}
+
+	accumulative = yes
+
+	min = -500
+
+	decay = {
+		base = 12
+	}
+}
+
+# They just genocided our species
+opinion_genocidal_our_species = {
+	opinion = {
+		base = -25
+	}
+
+	accumulative = yes
+
+	min = -1000
+
+	decay = {
+		base = 6
+	}
+}
