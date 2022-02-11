@@ -11,10 +11,10 @@ opinion_genocidal = {
 			NOR = {
 				is_country_type = fallen_empire
 				is_country_type = awakened_fallen_empire
-                has_ethic = "ethic_authoritarian"
-                has_ethic = "ethic_fanatic_authoritarian"
-                has_ethic = "ethic_xenophobe"
-                has_ethic = "ethic_fanatic_xenophobe"
+				has_ethic = "ethic_authoritarian"
+				has_ethic = "ethic_fanatic_authoritarian"
+				has_ethic = "ethic_xenophobe"
+				has_ethic = "ethic_fanatic_xenophobe"
 			}
 		}
 
